@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+
+  photostudio-app:
+    build: .
+    container_name: photostudio-app
+
+    ports:
+      - "4000:4000"   # host:container
+
+    depends_on:
+      - mongo
+
+    environment:
+      MONGO_URI: mongodb://mongo:27017/photostudioDB
+      PORT: 4000
+
+    restart: always
+
+  mongo:
+    image: mongo:7
+    container_name: photostudio-db
+
+    ports:
+      - "27018:27017"   
+
+    volumes:
+      - mongo-data:/data/db
+
+    restart: always
+
+volumes:
+  mongo-data:
