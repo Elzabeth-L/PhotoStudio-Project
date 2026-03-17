@@ -17,7 +17,7 @@ spec:
         image: elzabeth03/recruitment-app-project-recruitment-app:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 4000
+        - containerPort: 3000
         env:
         - name: MONGODB_AUTH_URI
           valueFrom:
