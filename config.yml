@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: photostudio-config
 data:
-  MONGO_URI: "mongodb://mongodb-service:27017/photostudioDB"
+  MONGODB_AUTH_URI: "mongodb://mongodb-service:27017/artgallery"
+  MONGODB_FEEDBACK_URI: "mongodb://mongodb-service:27017/artgallery"
+  MONGODB_URI: "mongodb://mongodb-service:27017"
   PORT: "4000"
-  API_URL: "http://photostudio-backend:4000"
