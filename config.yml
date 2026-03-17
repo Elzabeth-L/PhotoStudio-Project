@@ -6,4 +6,4 @@ data:
   MONGODB_AUTH_URI: "mongodb://mongodb-service:27017/artgallery"
   MONGODB_FEEDBACK_URI: "mongodb://mongodb-service:27017/artgallery"
   MONGODB_URI: "mongodb://mongodb-service:27017"
-  PORT: "4000"
+  PORT: "3000"
