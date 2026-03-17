@@ -7,15 +7,13 @@ services:
     container_name: photostudio-app
 
     ports:
-      - "4000:4000"   # host:container
+      - "3000:3000"   # host:container
 
     depends_on:
       - mongo
-
-    environment:
-      MONGO_URI: mongodb://mongo:27017/photostudioDB
-      PORT: 4000
-
+    env_file:
+      - .env
+    
     restart: always
 
   mongo:
