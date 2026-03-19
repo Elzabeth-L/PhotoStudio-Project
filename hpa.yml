@@ -17,4 +17,11 @@ spec:
         target:
           type: Utilization
           averageUtilization: 5
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60   # ⏱ wait 60 sec before scaling down
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60 
     
